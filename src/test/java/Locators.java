@@ -1,13 +1,10 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class Test01 {
-    public static void main(String[] args) throws InterruptedException {
+public class Locators {
+    public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
 
         // Initialize WebDriver
@@ -22,19 +19,12 @@ public class Test01 {
             throw new RuntimeException(e);
         }
 
-//       boolean visible=driver.findElement(By.className("department-logo")).isDisplayed();
-//        System.out.println(visible);
-//        driver.findElement(By.className("search-field")).sendKeys("research");
-//        driver.findElement(By.className("search-submit")).click();
-//        String search_text=driver.findElement(By.className("search-title")).getText();
-//        System.out.println(search_text);
-//        driver.findElement(By.linkText("Home")).click();
-//        List<WebElement>size=driver.findElements(By.cssSelector("#menu-departmental-header li"));
-//        System.out.println(size.size());
         driver.findElement(By.xpath("//input[@placeholder='Search …']")).sendKeys("research");
         driver.findElement(By.xpath("//input[@value='Search']")).click();
         String test=driver.findElement(By.xpath("//h1[@class='search-title']")).getText();
         System.out.println(test);
-//        driver.close();
+        driver.findElement(By.xpath("//h1[normalize-space()='Research Grants 2016']")).click();
+        boolean dis=driver.findElement(By.xpath("(//img[@alt='banner'])[1]")).isDisplayed();
+        System.out.println(dis);
     }
 }

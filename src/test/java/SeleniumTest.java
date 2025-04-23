@@ -15,6 +15,7 @@ public class SeleniumTest {
 
         // Print the title of the page
         System.out.println("Page Title: " + driver.getTitle());
+        
 
         // Close the browser
         driver.quit();

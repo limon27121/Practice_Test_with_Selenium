@@ -19,8 +19,9 @@ public class Browser_windows {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(1000);
         driver.findElement(By.linkText("OrangeHRM, Inc")).click();
-        //approach 1
-        //using list
+        //approach 1 (using list)
+
+
         Set<String>webelements=driver.getWindowHandles();
         //convert set to list
         List<String>web_ids=new ArrayList(webelements);
@@ -33,7 +34,7 @@ public class Browser_windows {
 //        String title02= driver.getTitle();
 //        System.out.println(title02);
 
-        //approach 2
+        //approach 2 (using loop)
 
         for (String web_id:web_ids){
             String title=driver.switchTo().window(web_id).getTitle();

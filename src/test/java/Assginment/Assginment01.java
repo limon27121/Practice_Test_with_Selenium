@@ -24,14 +24,11 @@ public class Assginment01 {
         driver.findElement(By.xpath("//input[@id='Wikipedia1_wikipedia-search-input']")).sendKeys("selenium");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         Thread.sleep(1000);
-//        List<WebElement>links=driver.findElements(By.className("wikipedia-search-results"));
         List<WebElement> links = driver.findElements(By.cssSelector(".wikipedia-search-results a"));
-
         int link_size= links.size();
         System.out.println("Number of links: " + link_size);
         for (WebElement link : links) {
            link.click();
-
         }
         Thread.sleep(1000);
         Set<String> webelements = driver.getWindowHandles();

@@ -34,7 +34,7 @@ public class Hidden_dropdows {
                 By.xpath("//div[7]//div[1]//div[2]//div[1]//div[1]//div[1]")));
         dropdownIcon.click();
 
-                        //**select a single options**
+                             //**select a single options**
 
 // Wait for options to appear
 
@@ -50,7 +50,7 @@ public class Hidden_dropdows {
 
 
 
-                           //**count number of options**
+                                //**count number of options**
 
 // Wait for the listbox to appear
 
@@ -63,14 +63,14 @@ public class Hidden_dropdows {
         System.out.println("Number of dropdown options: " + options.size());
 
 
-                         //**print all the options
+                                //**print all the options
 
 
         for (WebElement option : options) {
             System.out.println(option.getText());
         }
 
-        
+
 
         }
     }

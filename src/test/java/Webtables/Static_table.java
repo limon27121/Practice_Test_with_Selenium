@@ -22,10 +22,10 @@ public class Static_table {
         // Open a website
         driver.get("https://testautomationpractice.blogspot.com/");
 
-        //find the number of row
+        //find the number of rows
        int rows_number=driver.findElements(By.xpath("//table[@name='BookTable']//tr")).size();
         System.out.println(rows_number);
-        //find the number of column
+        //find the number of columns header
         int colums_number=driver.findElements(By.xpath("//table[@name='BookTable']//tr//th")).size();
         System.out.println(colums_number);
         //extract the table header name
@@ -33,6 +33,7 @@ public class Static_table {
         for (WebElement text:header_text){
             System.out.println(text.getText());
         }
+
 
         //read specific row and column value
         String value=driver.findElement(By.xpath("//table[@name='BookTable']//tr[6]//td[1]")).getText();

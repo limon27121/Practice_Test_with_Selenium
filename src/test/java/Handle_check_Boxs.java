@@ -23,6 +23,7 @@ public class Handle_check_Boxs {
         //check all checkboxes
 
         List<WebElement>checkboxs=driver.findElements(By.xpath("//input[@class='form-check-input' and @type='checkbox']"));
+        System.out.println(checkboxs.size());
 //        for (WebElement element:checkboxs){
 //            element.click();
 //        }

@@ -13,7 +13,7 @@ public class Handle_alert {
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         Thread.sleep(200);
-        //normal alert with ok button
+        //---normal alert with ok button
 //        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Alert']")).click();
 //        Alert alert=driver.switchTo().alert();
 //        System.out.println(alert.getText());
@@ -22,8 +22,10 @@ public class Handle_alert {
         //alert with ok and cancel button
 
 //        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
+          //for accept the alert
 //        driver.switchTo().alert().accept();
-////        driver.switchTo().alert().dismiss();
+        //for dismiss the alert
+//        driver.switchTo().alert().dismiss();
 //        Thread.sleep(300);
 //        String result = driver.findElement(By.xpath("//p[@id='result']")).getText();
 //        if (result.contains("Ok")) {
@@ -33,7 +35,7 @@ public class Handle_alert {
 
         //prompt alert
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Prompt']")).click();
-        Alert alert=driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         alert.sendKeys("Welcome");
         alert.accept();
     }

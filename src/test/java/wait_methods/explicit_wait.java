@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class explicit_wait {
+public class  explicit_wait {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
 

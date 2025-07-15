@@ -24,7 +24,7 @@ public class select_dropdowns {
         Select drp=new Select(drop_down);
 //        drp.selectByVisibleText("Canada");
 //        drp.selectByValue("germany");
-        drp.selectByIndex(2);
+//        drp.selectByIndex(2);
 
         //capture options from the dropdown
 
@@ -34,6 +34,17 @@ public class select_dropdowns {
         //print the options
         for (int i=0;i<options.size();i++){
             System.out.println(options.get(i).getText());
+            String text=options.get(i).getText();
+            String text1="Germany";
+            if (text.equalsIgnoreCase(text1)){
+                drp.selectByIndex(i);
+                System.out.println("done");
+                break;
+            }
+//            else {
+//                System.out.println("fail");
+//                break;
+//            }
         }
     }
 }

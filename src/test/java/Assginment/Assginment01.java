@@ -36,9 +36,9 @@ public class Assginment01 {
 
         for (String web_id : web_ids) {
             driver.switchTo().window(web_id);  // switch to each window ID properly
-            String title = driver.getCurrentUrl();
+            String url = driver.getCurrentUrl();
             Thread.sleep(200);
-           if(title.equals("https://en.wikipedia.org/wiki/Selenium")){
+           if(url.equals("https://en.wikipedia.org/wiki/Selenium")){
                driver.close();
            }
         }

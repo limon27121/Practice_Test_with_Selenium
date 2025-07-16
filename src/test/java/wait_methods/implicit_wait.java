@@ -14,6 +14,7 @@ public class implicit_wait {
 
         // Initialize WebDriver
         WebDriver driver = new ChromeDriver();
+        //implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
